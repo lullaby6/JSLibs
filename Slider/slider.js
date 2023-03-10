@@ -42,8 +42,11 @@ sliders.forEach(slider => {
                     break
                 case 'push':
                     sliderItem.style.left = `${getComputedStyle(slider).width}`
+                    sliderItem.style.zIndex = '0'
                     break
                 case 'scale':
+                    sliderItem.style.scale = '0'
+                    sliderItem.style.zIndex = '0'
                     break
             }
         }else{
@@ -51,14 +54,15 @@ sliders.forEach(slider => {
                 case 'pull':
                     sliderItem.style.zIndex = 10
                     break
-                case 'push':
+                case 'pull':
+                    sliderItem.style.zIndex = 10
                     break
                 case 'scale':
+                    sliderItem.style.zIndex = 10
                     break
             }
         }
     })
-
 
     slider.next = () => {
         if(slider.animationTimeout == null){
@@ -105,6 +109,16 @@ sliders.forEach(slider => {
                     slider.indexAnimation = [
                         {left: `${getComputedStyle(slider).width}`, zIndex: 0},
                         {left: '0', zIndex: 10}
+                    ]
+                    break
+                case 'scale':
+                    slider.lastIndexAnimation = [
+                        {zIndex: 10},
+                        {zIndex: 0}
+                    ]
+                    slider.indexAnimation = [
+                        {scale: 0, zIndex: 0},
+                        {scale: 1, zIndex: 10}
                     ]
                     break
             }
@@ -157,6 +171,16 @@ sliders.forEach(slider => {
                     slider.indexAnimation = [
                         {left: `-${getComputedStyle(slider).width}`, zIndex: 0},
                         {left: '0', zIndex: 10}
+                    ]
+                    break
+                case 'scale':
+                    slider.lastIndexAnimation = [
+                        {scale: 1},
+                        {scale: 0}
+                    ]
+                    slider.indexAnimation = [
+                        {scale: 0},
+                        {scale: 1}
                     ]
                     break
             }
