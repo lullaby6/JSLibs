@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+	--bg: #ddd;
+	--button: #fff;
+    --text: #444;
+    --border: #c2c2c2;
+}
+
+html.dark {
+	--bg: #222;
+	--button: #444;
+    --text: #fff;
+    --border: #444;
+}
+
+body {
+    background-color: var(--bg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-button {
+    background-color: var(--button);
+    color: var(--text);
+    border: 1px var(--border) solid;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px;
+    transition: scale .3s ease-in-out;
+}
+
+.my-button:hover {
+    scale: 1.125;
+}
