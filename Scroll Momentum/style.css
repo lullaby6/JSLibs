@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0 !important
+}
+
+body {
+    display: fixed;
+    top: 0;
+    left: 0;
+}
+
+section {
+    height : 100vh;
+    display : flex;
+    align-items:center;
+    justify-content : center;
+    font-size : 3em;
+    font-family : sans-serif;
+}
+
+.one {
+    background-color: #242582;
+    color : #fff;
+}
+
+.two {
+    background-color: #f64c72;
+    color : #fff;
+}
+
+.three {
+    background-color: #99738e;
+    color : #fff;
+}
+
+.four {
+    background-color: #72e16a;
+    color : #fff;
+}
