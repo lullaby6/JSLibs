@@ -73,11 +73,6 @@ if(Object.values(document.body.classList).includes('fullpage')){
         if(keyDowns.includes(e.keyCode)) scrollDown()
     })
 
-    window.addEventListener('DOMMouseScroll', e => {
-        e.preventDefault()
-        console.log('DOMMouseScroll');
-    }, false);
-
     window.addEventListener(wheelEvent, e => {
         if(e.deltaY > 0) scrollDown()
         else scrollUp()

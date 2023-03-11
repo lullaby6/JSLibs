@@ -22,8 +22,8 @@ sliders.forEach(slider => {
     slider.style.overflow = slider.getAttribute('overflow') || 'hidden'
 
     slider.animation = slider.getAttribute('animation') || 'slide'
-    slider.animationDuration = Number(slider.getAttribute('animation-duration')) || 1000
-    slider.animationEasing = slider.getAttribute('animation-easing') || 'ease-in-out'
+    slider.animationDuration = Number(slider.getAttribute('duration')) || 1000
+    slider.animationEasing = slider.getAttribute('easing') || 'ease-in-out'
     slider.animationTimeout = null
 
     slider.sliderItems = slider.querySelectorAll('.slider-item')
